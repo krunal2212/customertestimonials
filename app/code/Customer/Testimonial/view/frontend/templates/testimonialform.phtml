@@ -18,7 +18,7 @@ $cid = $users['entity_id'];
         <div class="field name required">
             <label class="label" for="name"><span><?= __('Name') ?></span></label>
             <div class="control">
-                <input name="name" id="name" title="<?= __('name') ?>"
+                <input name="name" id="name" title="<?= __('name') ?>" <?php echo !empty($firstname) ? 'readonly' :'';?>
                        value="<?php if (isset($firstname) && $firstname != '') {
                            echo $firstname;
                        } else {
@@ -29,7 +29,7 @@ $cid = $users['entity_id'];
         <div class="field email required">
             <label class="label" for="name"><span><?= __('Email') ?></span></label>
             <div class="control">
-                <input name="email" id="email" title="<?= __('email') ?>"
+                <input name="email" id="email" title="<?= __('email') ?>" <?php echo !empty($email) ? 'readonly' :'';?>
                        value="<?php if (isset($email) && $email != '') {
                            echo $email;
                        } else {
